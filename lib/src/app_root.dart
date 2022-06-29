@@ -22,7 +22,8 @@ class AppRoot extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: firstLunch ? OnBoarding() : Login(),
+      home:
+          firstLunch ? SafeArea(child: OnBoarding()) : SafeArea(child: Login()),
     );
   }
 }

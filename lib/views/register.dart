@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:task1/views/register.dart';
+import 'package:task1/views/Login.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _LoginState extends State<Login> {
-  final _formKey = GlobalKey<FormState>();
+class _RegisterState extends State<Register> {
   bool _passwordVisible = true;
-  String? email, pass;
+  final _formKey = GlobalKey<FormState>();
+  String? email, pass, confPass;
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class _LoginState extends State<Login> {
                             child: Padding(
                               padding: EdgeInsets.all(10.0),
                               child: Text(
-                                'Hello Again!',
+                                'Join Us!',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Color(0xff101032),
@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
                           ),
                           FittedBox(
                             child: Text(
-                              "Welcome back you've\nbeen missed!",
+                              "Create your account\nJoin Random!",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Color(0xff101032),
@@ -76,7 +76,7 @@ class _LoginState extends State<Login> {
                                     label: const Text('E-mail')),
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return 'the app does not prefer Empty E-mail';
+                                    return 'The app does not prefer Empty E-mail';
                                   } else if (!RegExp(
                                           r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
                                       .hasMatch(value!)) {
@@ -113,9 +113,33 @@ class _LoginState extends State<Login> {
                                             BorderRadius.circular(15)),
                                     hintText: 'Enter Password',
                                     label: const Text('Password')),
+                                // The validator receives the text that the user has entered.
                                 validator: (value) {
                                   if (value == null || value.isEmpty) {
-                                    return 'the app does not prefer Empty text';
+                                    return 'the app does not prefer random password';
+                                  }
+                                  return null;
+                                },
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              TextFormField(
+                                onSaved: (newValue) {
+                                  confPass = newValue;
+                                },
+                                obscureText: _passwordVisible,
+                                decoration: InputDecoration(
+                                    border: OutlineInputBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                    hintText: 'Confirm Password',
+                                    label: const Text('Confirm Password')),
+                                validator: (value) {
+                                  if (value == null ||
+                                      value.isEmpty ||
+                                      value != pass) {
+                                    return 'Password dose not match';
                                   }
                                   return null;
                                 },
@@ -137,10 +161,16 @@ class _LoginState extends State<Login> {
                                                 BorderRadius.circular(15)))),
                                 onPressed: () async {
                                   _formKey.currentState!.save();
-                                  if (_formKey.currentState!.validate()) {}
+                                  // Validate returns true if the form is valid, or false otherwise.
+                                  if (_formKey.currentState!.validate()) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
+                                          content: Text('Processing Data')),
+                                    );
+                                  }
                                 },
                                 child: const Text(
-                                  'Sign In',
+                                  'Sign Up',
                                 ),
                               ),
                             ],
@@ -152,7 +182,7 @@ class _LoginState extends State<Login> {
                         child: Row(
                           children: [
                             const Text(
-                              "Dont Have Account ?",
+                              "You Already have one?",
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: Color(0xff101032),
@@ -164,11 +194,11 @@ class _LoginState extends State<Login> {
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => Register(),
+                                      builder: (context) => Login(),
                                     ));
                               },
                               child: Text(
-                                " Create Account",
+                                " Sign In",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     color: Theme.of(context).primaryColor,
