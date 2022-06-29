@@ -15,15 +15,24 @@ class _OnBoardingState extends State<OnBoarding> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          ElevatedButton(onPressed: () {}, child: Text('Skip')),
-          PageView.builder(
-            controller: onBoardingPageViewController,
-            itemBuilder: (BuildContext context, int index) { return OnBoardingPageViewBody(pageViewBodyModel: pages[index]); },
-
-          ),
-        ],
+      body: Container(
+        child: Column(
+          children: [
+            ElevatedButton(onPressed: () {}, child: Text('Skip')),
+            SizedBox(
+              height: 400,
+              width: 400,
+              child: PageView.builder(
+                itemCount: 3,
+                controller: onBoardingPageViewController,
+                itemBuilder: (BuildContext context, int index) {
+                  return OnBoardingPageViewBody(
+                      pageViewBodyModel: pages[index]);
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

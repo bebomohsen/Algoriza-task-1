@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1185c7f-2299-40a3-8ea2-2b2e3f93da8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/m2H7K9N4Z5N4m2d3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/—Pngtree—buy food for iftar_7426558.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/—Pngtree—rising staple price inflation_7496031.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/Models/page_view_body_model.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/components/on_boarding_page_view_body.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/src/app_root.dart" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/lib/views/Login.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/views/on_boarding.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/m2H7K9N4Z5N4m2d3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/first.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/—Pngtree—buy food for iftar_7426558.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/second.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/—Pngtree—rising staple price inflation_7496031.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/third.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Models/page_view_body_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Models/page_view_body_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/components/on_boarding_page_view_body.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/components/on_boarding_page_view_body.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/views/on_boarding.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/views/on_boarding.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,6 +50,7 @@
     <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>

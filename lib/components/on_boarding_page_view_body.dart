@@ -13,7 +13,7 @@ class OnBoardingPageViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Expanded(child: Image.network(pageViewBodyModel.imgUrl)),
+        Expanded(child: Image.asset(pageViewBodyModel.imgUrl)),
         Spacer(),
         Text(
           pageViewBodyModel.title,
